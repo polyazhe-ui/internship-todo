@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+using Task = Student.Task;
 
 internal class Program
 {
@@ -66,10 +65,4 @@ internal class Program
             }
         }
     }
-}
-
-class Task
-{
-    public string title = "";
-    public string description = "";
 }
