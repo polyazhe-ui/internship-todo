@@ -1,59 +1,75 @@
-﻿internal class Program
+﻿using System;
+using System.Collections.Generic;
+
+internal class Program
 {
     private static void Main()
     {
-        List<string> tasks = new List<string>();
+        List<Task> tasks = new List<Task>();
 
         while (true)
         {
-            Console.WriteLine("Для вызова выполняемой подпрограммы укажите ее номер и нажните Enter:\n1 - Посмотреть список задач\n2 - Добавить задачу");
-            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Для вызова подпрограммы укажите её номер и нажмите Enter:");
+            Console.WriteLine("1 - Посмотреть список задач");
+            Console.WriteLine("2 - Добавить задачу");
 
-            switch (number)
+            if (!int.TryParse(Console.ReadLine(), out int actionNumber))
+            {
+                Console.WriteLine("Нужно ввести число. Попробуйте снова.");
+                continue;
+            }
+
+            switch (actionNumber)             
             {
                 case 1:
                     WatchTaskList();
                     break;
                 case 2:
-                    string newTask = AddNewTask();
-                    tasks.Add(newTask);
+                    GetTask();                 
+                    break;
+                default:
+                    Console.WriteLine("Нет такого пункта меню.");
                     break;
             }
 
-
+            /// <summary>
+            /// Выводит в консоль список записанных задач
+            /// </summary>
             void WatchTaskList()
             {
                 Console.WriteLine("Список задач:");
                 int listIndex = 0;
-                foreach (string i in tasks)
+                foreach (Task t in tasks)
                 {
-                    string[] titleAndTask = i.Split("<end>", 2);
-                    Console.WriteLine($"Задача {Convert.ToString(listIndex + 1)}: ");
-                    Console.WriteLine($"Заголовок: {titleAndTask[0]}");
-                    Console.WriteLine($"Описание: {titleAndTask[1]}");
+                    Console.WriteLine($"Задача {listIndex + 1}:");
+                    Console.WriteLine($"Заголовок: {t.title}");
+                    Console.WriteLine($"Описание: {t.description}");
                     listIndex++;
                 }
-                Console.WriteLine("Для возврата к списку подпрограмм нажмите Esc:");
-
+                Console.WriteLine("Для возврата нажмите Esc:");
                 ConsoleKeyInfo key;
-                do
-                {
-                    key = Console.ReadKey(intercept: true);
-                } 
+                do { key = Console.ReadKey(intercept: true); }
                 while (key.Key != ConsoleKey.Escape);
-
             }
 
-            string AddNewTask()
+            /// <summary>
+            /// Создаёт новый экземпляр класса Тask и добовляет его в список задач. 
+            /// </summary>
+            void GetTask()
             {
-
-                Console.WriteLine("Введите заголовок задачи. По завершению ввода нажмите Enter:");
-                var taskLable = Console.ReadLine();
-                Console.WriteLine("Введите описание задачи. По завершению ввода нажмите Enter:");
-                var taskText = Console.ReadLine();
-                return taskLable + "<end>" + taskText;
-
+                Task task = new Task();
+                Console.WriteLine("Введите заголовок задачи:");
+                task.title = Console.ReadLine() ?? "";
+                Console.WriteLine("Введите описание задачи:");
+                task.description = Console.ReadLine() ?? "";
+                tasks.Add(task);         
             }
         }
     }
+}
+
+class Task
+{
+    public string title = "";
+    public string description = "";
 }

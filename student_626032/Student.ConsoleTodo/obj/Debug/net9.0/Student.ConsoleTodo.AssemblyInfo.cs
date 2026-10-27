@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Student.ConsoleTodo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1fa332c481a8081241c9dab9560832ffee71ef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29186efc750c1475813bb5096bb3c191be50f6be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Student.ConsoleTodo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Student.ConsoleTodo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
