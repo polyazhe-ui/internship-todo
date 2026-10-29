@@ -35,7 +35,7 @@ internal class Program
             /// <summary>
             /// Выводит в консоль список записанных задач.
             /// </summary>
-            void WatchTaskList()
+            private void WatchTaskList()
             {
                 Console.WriteLine("Список задач:");
                 int listIndex = 0;
@@ -62,7 +62,7 @@ internal class Program
             /// <summary>
             /// Добавляет задачу.
             /// </summary>
-            void AddTask()
+            private void AddTask()
             {
                 Task task = new Task();
                 Console.WriteLine("Введите заголовок задачи:");
