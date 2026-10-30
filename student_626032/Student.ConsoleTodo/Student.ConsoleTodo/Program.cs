@@ -38,6 +38,7 @@ internal class Program
     /// <summary>
     /// Выводит в консоль список записанных задач.
     /// </summary>
+    /// <param name="tasks">Список задач.</param>
     private static void WatchTaskList(List<Task> tasks)
     {
         Console.WriteLine("Список задач:");
@@ -65,6 +66,7 @@ internal class Program
     /// <summary>
     /// Добавляет задачу.
     /// </summary>
+    /// <returns>Задача.</returns>
     private static Task AddTask()
     {
         Task task = new Task();

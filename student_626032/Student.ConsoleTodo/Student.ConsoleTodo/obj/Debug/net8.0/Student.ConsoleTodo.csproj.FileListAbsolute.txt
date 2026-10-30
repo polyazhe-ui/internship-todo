@@ -1,0 +1,15 @@
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\bin\Debug\net8.0\Student.ConsoleTodo.exe
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\bin\Debug\net8.0\Student.ConsoleTodo.deps.json
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\bin\Debug\net8.0\Student.ConsoleTodo.runtimeconfig.json
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\bin\Debug\net8.0\Student.ConsoleTodo.dll
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\bin\Debug\net8.0\Student.ConsoleTodo.pdb
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.GeneratedMSBuildEditorConfig.editorconfig
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.AssemblyInfoInputs.cache
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.AssemblyInfo.cs
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.csproj.CoreCompileInputs.cache
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.sourcelink.json
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.dll
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\refint\Student.ConsoleTodo.dll
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.pdb
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\Student.ConsoleTodo.genruntimeconfig.cache
+D:\labs\test\internship-todo\student_626032\Student.ConsoleTodo\Student.ConsoleTodo\obj\Debug\net8.0\ref\Student.ConsoleTodo.dll
