@@ -7,7 +7,7 @@
             while (true)
             {
                 Console.WriteLine("Для вызова выполняемой подпрограммы укажите ее номер и нажните Enter:\n1 - IF ELSE\n2 - WHILE\n3 - DO WHILE\n4 - FOR\n5 - FOREACH\n6 - SWITCH");
-                int number = Convert.ToInt32(Console.ReadLine());
+                int number = ReadInt();
 
                 switch (number)
                 {
@@ -36,7 +36,7 @@
                     do
                     {
                         Console.WriteLine("Введите свой возраст:");
-                        var age = Console.ReadLine();
+                        var age = ReadInt();
                         if (Convert.ToInt32(age) >= 18)
                         {
                             Console.WriteLine("Вы уже достигли совершеннолетия");
@@ -54,7 +54,7 @@
                     do
                     {
                         Console.WriteLine("Введите число, чтобы начать обратный отсчёт:");
-                        int num = Convert.ToInt32(Console.ReadLine());
+                        int num = ReadInt();
                         int i = 0;
                         while (num > i)
                         {
@@ -88,15 +88,15 @@
                     do
                     {
                         Console.WriteLine("Для выполнения подпрограммы FOR введите начальное число и количество повторений последовательно через Enter, для возврата к списку подпрограмм нажмите Esc:");
-                        int num1 = Convert.ToInt32(Console.ReadLine());
-                        int repeat1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"Число {num1} будет умножено {repeat1} раз на число 2");
-                        for (int i = 0; i < repeat1; i++)
+                        int num = ReadInt();
+                        int repeat = ReadInt();
+                        Console.WriteLine($"Число {num} будет умножено {repeat} раз на число 2");
+                        for (int i = 0; i < repeat; i++)
                         {
-                            num1 *= 2;
-                            Console.WriteLine($"После {i + 1}-ого умножения на 2 число равно {num1}");
+                            num *= 2;
+                            Console.WriteLine($"После {i + 1}-ого умножения на 2 число равно {num}");
                         }
-                        Console.WriteLine($"Результат: {num1}");
+                        Console.WriteLine($"Результат: {num}");
 
                     }
                     while (ConfirmRepeat());
@@ -107,12 +107,12 @@
                     do
                     {
                         Console.WriteLine("Поочерёдно введите ведите три любых числа для создания массива:");
-                        int firstNumber = Convert.ToInt32(Console.ReadLine());
-                        int secondNumber = Convert.ToInt32(Console.ReadLine());
-                        int thirdNumber = Convert.ToInt32(Console.ReadLine());
+                        int firstNumber = ReadInt();
+                        int secondNumber = ReadInt();
+                        int thirdNumber = ReadInt();
                         int[] numbers = new int[3] { firstNumber, secondNumber, thirdNumber };
                         Console.WriteLine("Введите число, на которое хотите умножить каждый элемент массива:");
-                        int multiplier = Convert.ToInt32(Console.ReadLine());
+                        int multiplier = ReadInt();
                         Console.WriteLine("Результат:");
 
                         foreach (int i in numbers)
@@ -129,7 +129,7 @@
                     do
                     {
                         Console.WriteLine("Введите номер дня недели (1–7):");
-                        int day = Convert.ToInt32(Console.ReadLine());
+                        int day = ReadInt();
 
                         switch (day)
                         {
@@ -168,5 +168,20 @@
                 }
             }
         }
+
+        public static int ReadInt()
+        {
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out int result))
+                {
+                    return result;
+                }
+
+                Console.WriteLine("Не удалось преобразовать строку в число. Попробуйте еще раз:");
+            }
+        }
+
     }
 }
