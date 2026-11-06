@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -51,11 +52,24 @@
             button2.Text = "Создать";
             button2.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(12, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(359, 70);
+            label1.TabIndex = 2;
+            label1.Text = "Вы действительно хотите удалить задачу? Если да, то нажмите кнопку \"Удалить\", иначе нажмите \"Отмена\". ";
+            label1.UseMnemonic = false;
+            label1.Visible = false;
+            label1.Click += label1_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(392, 154);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form3";
@@ -67,5 +81,6 @@
 
         private Button button1;
         private Button button2;
+        private Label label1;
     }
 }

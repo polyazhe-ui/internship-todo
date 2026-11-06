@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             button2 = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            textBox1 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -50,21 +57,84 @@
             button2.Text = "Создать";
             button2.UseVisualStyleBackColor = true;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(61, 4);
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(22, 59);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(749, 41);
+            textBox1.TabIndex = 5;
+            textBox1.Text = "Введите заголовок задачи...";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(22, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(138, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Описание задачи:";
+            label2.Click += label2_Click_2;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(22, 155);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(749, 195);
+            textBox2.TabIndex = 7;
+            textBox2.Text = "Введите описание задачи...";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(22, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 21);
+            label1.TabIndex = 8;
+            label1.Text = "Текст задачи:";
+            label1.Click += label1_Click_1;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 435);
+            Controls.Add(label1);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form2";
             Text = "Новая задача";
+            Load += Form2_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
         private Button button2;
+        private ContextMenuStrip contextMenuStrip1;
+        private ContextMenuStrip contextMenuStrip2;
+        private TextBox textBox1;
+        private Label label2;
+        private TextBox textBox2;
+        private Label label1;
     }
 }
