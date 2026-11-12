@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\labs\\test\\internship-todo\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj": {}
+    "D:\\тест\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj": {}
   },
   "projects": {
-    "D:\\labs\\test\\internship-todo\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj": {
+    "D:\\тест\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\labs\\test\\internship-todo\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj",
+        "projectUniqueName": "D:\\тест\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj",
         "projectName": "Student.WindowsTodo",
-        "projectPath": "D:\\labs\\test\\internship-todo\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj",
+        "projectPath": "D:\\тест\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\Student.WindowsTodo.csproj",
         "packagesPath": "C:\\Users\\ZhechkovskayaPK\\.nuget\\packages\\",
-        "outputPath": "D:\\labs\\test\\internship-todo\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\obj\\",
+        "outputPath": "D:\\тест\\student_626032\\Student.WindowsTodo\\Student.WindowsTodo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -29,8 +29,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows": {
-            "framework": "net8.0-windows7.0",
+          "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
@@ -45,11 +44,10 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0-windows": {
-          "framework": "net8.0-windows7.0",
+        "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "imports": [
             "net461",
@@ -70,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

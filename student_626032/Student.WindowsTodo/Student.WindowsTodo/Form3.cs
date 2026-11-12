@@ -1,35 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Student.WindowsTodo
+﻿namespace Student.WindowsTodo
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        /// <param name="taskTitle">Заголовок удаляемой задачи — покажем его в вопросе.</param>
+        public Form3(string taskTitle)
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            StartPosition = FormStartPosition.CenterParent;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
 
-        }
+            label1.Visible = true;
+            label1.Text = $"Вы действительно хотите удалить задачу «{taskTitle}»?";
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+            button1.Text = "Отмена";
+            button1.DialogResult = DialogResult.Cancel;
 
-        }
+            button2.Text = "Удалить";
+            button2.DialogResult = DialogResult.OK;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            CancelButton = button1; // Esc = отмена
         }
     }
 }

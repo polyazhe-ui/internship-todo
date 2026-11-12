@@ -1,6 +1,8 @@
-﻿namespace Student.WindowsTodo
+﻿using System.ComponentModel;
+
+namespace Student.WindowsTodo
 {
-    partial class Form1
+    public partial class Form1 : Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +31,11 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            dataGridView2 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewButtonColumn();
+            ((ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -40,37 +46,56 @@
             button1.TabIndex = 0;
             button1.Text = "Добавить задачу";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // tableLayoutPanel1
+            // dataGridView2
             // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.95652F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.04348F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 202F));
-            tableLayoutPanel1.Location = new Point(12, 88);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 15.4302673F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 84.56973F));
-            tableLayoutPanel1.Size = new Size(758, 337);
-            tableLayoutPanel1.TabIndex = 1;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridView2.Location = new Point(12, 90);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(776, 333);
+            dataGridView2.TabIndex = 2;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Задача";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Описание";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Удалить";
+            Column3.Name = "Column3";
+            Column3.Resizable = DataGridViewTriState.True;
+            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
+            Column3.Text = "Удалить ";
+            Column3.UseColumnTextForButtonValue = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(dataGridView2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Todo";
+            ((ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button1;
-        private TableLayoutPanel tableLayoutPanel1;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewButtonColumn Column3;
     }
 }
