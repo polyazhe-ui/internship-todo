@@ -41,7 +41,6 @@
             button1.TabIndex = 0;
             button1.Text = "Отмена";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -62,7 +61,6 @@
             label1.Text = "Вы действительно хотите удалить задачу? Если да, то нажмите кнопку \"Удалить\", иначе нажмите \"Отмена\". ";
             label1.UseMnemonic = false;
             label1.Visible = false;
-            label1.Click += label1_Click;
             // 
             // Form3
             // 

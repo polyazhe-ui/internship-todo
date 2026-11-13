@@ -1,4 +1,4 @@
-﻿using Task = Student.Task;
+﻿using Task = Student.WindowsTodo.Task;
 
 namespace Student.WindowsTodo
 {
