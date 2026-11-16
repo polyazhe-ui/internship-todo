@@ -2,10 +2,17 @@ using Task = Student.WindowsTodo.Task;
 
 namespace Student.WindowsTodo
 {
+
+    /// <summary>
+    /// Первая форма для просмотра задач. 
+    /// </summary>
     public partial class Form1 : Form
     {
         private readonly List<Task> tasks = new List<Task>();
 
+        /// <summary>
+        /// Инициализирует главную форму приложения.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();        
@@ -46,6 +53,11 @@ namespace Student.WindowsTodo
             }
         }
 
+        /// <summary>
+        /// Добавляет новую задачу в таблицу.
+        /// </summary>
+        /// <param name="sender">Кнопка, вызвавающая обработчик.</param>
+        /// <param name="e">Данные о событии нажатия кнопки.</param>
         private void button1_Click(object? sender, EventArgs e)
         {
             using (Form2 addForm = new Form2())
@@ -61,13 +73,13 @@ namespace Student.WindowsTodo
         }
 
         /// <summary>
-        /// Клик по содержимому ячейки (нас интересует кнопка «Удалить»).
-        /// Подписка уже есть в Form1.Designer.cs.
+        /// Обработка клика по кнопке удаления.
         /// </summary>
+        /// <param name="sender">Таблица задач.</param>
+        /// <param name="e">Данные о событии.</param>
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // e.RowIndex == -1 означает клик по заголовку столбца.
-            // Ещё проверяем, что кликнули именно по столбцу с кнопкой.
+
             if (e.RowIndex < 0 || e.ColumnIndex != Column3.Index)
             {
                 return;

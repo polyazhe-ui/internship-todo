@@ -1,8 +1,14 @@
 ﻿namespace Student.WindowsTodo
 {
+    /// <summary>
+    /// Третья форма для подтверждения удаления задачи.
+    /// </summar
     public partial class Form3 : Form
     {
-        /// <param name="taskTitle">Заголовок удаляемой задачи — покажем его в вопросе.</param>
+        /// <summary>
+        /// Инициализирует третью форму приложения.
+        /// </summary>
+        /// <param name="taskTitle">Заголовок задачи для удаления.</param>
         public Form3(string taskTitle)
         {
             InitializeComponent();
@@ -21,7 +27,6 @@
             button2.Text = "Удалить";
             button2.DialogResult = DialogResult.OK;
 
-            CancelButton = button1; // Esc = отмена
         }
     }
 }
