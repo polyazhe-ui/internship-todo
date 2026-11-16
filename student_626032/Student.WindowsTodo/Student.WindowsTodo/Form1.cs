@@ -4,14 +4,14 @@ namespace Student.WindowsTodo
 {
 
     /// <summary>
-    /// Первая форма для просмотра задач. 
+    /// РџРµСЂРІР°СЏ С„РѕСЂРјР° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° Р·Р°РґР°С‡. 
     /// </summary>
     public partial class Form1 : Form
     {
         private readonly List<Task> tasks = new List<Task>();
 
         /// <summary>
-        /// Инициализирует главную форму приложения.
+        /// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РіР»Р°РІРЅСѓСЋ С„РѕСЂРјСѓ РїСЂРёР»РѕР¶РµРЅРёСЏ.
         /// </summary>
         public Form1()
         {
@@ -22,7 +22,7 @@ namespace Student.WindowsTodo
         }
 
         /// <summary>
-        /// Настраивает таблицу.
+        /// РќР°СЃС‚СЂР°РёРІР°РµС‚ С‚Р°Р±Р»РёС†Сѓ.
         /// </summary>
         private void SetupGrid()
         {
@@ -40,7 +40,7 @@ namespace Student.WindowsTodo
         }
 
         /// <summary>
-        /// Создаёт таблицу по списку задач.
+        /// РЎРѕР·РґР°С‘С‚ С‚Р°Р±Р»РёС†Сѓ РїРѕ СЃРїРёСЃРєСѓ Р·Р°РґР°С‡.
         /// </summary>
         private void RefreshGrid()
         {
@@ -54,10 +54,10 @@ namespace Student.WindowsTodo
         }
 
         /// <summary>
-        /// Добавляет новую задачу в таблицу.
+        /// Р”РѕР±Р°РІР»СЏРµС‚ РЅРѕРІСѓСЋ Р·Р°РґР°С‡Сѓ РІ С‚Р°Р±Р»РёС†Сѓ.
         /// </summary>
-        /// <param name="sender">Кнопка, вызвавающая обработчик.</param>
-        /// <param name="e">Данные о событии нажатия кнопки.</param>
+        /// <param name="sender">РљРЅРѕРїРєР°, РІС‹Р·РІР°РІР°СЋС‰Р°СЏ РѕР±СЂР°Р±РѕС‚С‡РёРє.</param>
+        /// <param name="e">Р”Р°РЅРЅС‹Рµ Рѕ СЃРѕР±С‹С‚РёРё РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё.</param>
         private void button1_Click(object? sender, EventArgs e)
         {
             using (Form2 addForm = new Form2())
@@ -73,10 +73,10 @@ namespace Student.WindowsTodo
         }
 
         /// <summary>
-        /// Обработка клика по кнопке удаления.
+        /// РћР±СЂР°Р±РѕС‚РєР° РєР»РёРєР° РїРѕ РєРЅРѕРїРєРµ СѓРґР°Р»РµРЅРёСЏ.
         /// </summary>
-        /// <param name="sender">Таблица задач.</param>
-        /// <param name="e">Данные о событии.</param>
+        /// <param name="sender">РўР°Р±Р»РёС†Р° Р·Р°РґР°С‡.</param>
+        /// <param name="e">Р”Р°РЅРЅС‹Рµ Рѕ СЃРѕР±С‹С‚РёРё.</param>
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
