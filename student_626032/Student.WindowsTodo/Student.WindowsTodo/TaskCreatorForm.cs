@@ -1,11 +1,9 @@
-﻿using Task = Student.WindowsTodo.Task;
-
-namespace Student.WindowsTodo
+﻿namespace Student.WindowsTodo
 {
     /// <summary>
     /// Вторая форма для создания задачи.
     /// </summar
-    public partial class Form2 : Form
+    public partial class TaskCreatorForm : Form
     {
         /// <summary>
         /// Созданная задача.
@@ -15,7 +13,7 @@ namespace Student.WindowsTodo
         /// <summary>
         /// Инициализирует вторую форму приложения.
         /// </summary>
-        public Form2()
+        public TaskCreatorForm()
         {
             InitializeComponent();
 
@@ -24,15 +22,15 @@ namespace Student.WindowsTodo
             MaximizeBox = false;
             MinimizeBox = false;
 
-            textBox1.Text = "";
-            textBox1.PlaceholderText = "Введите заголовок задачи...";
-            textBox2.Text = "";
-            textBox2.PlaceholderText = "Введите описание задачи...";
+            tbTaskTitle.Text = "";
+            tbTaskTitle.PlaceholderText = "Введите заголовок задачи...";
+            tbTaskDescription.Text = "";
+            tbTaskDescription.PlaceholderText = "Введите описание задачи...";
 
-            button1.DialogResult = DialogResult.Cancel; 
-            CancelButton = button1;                     
+            bCancel.DialogResult = DialogResult.Cancel; 
+            CancelButton = bCancel;                     
 
-            button2.Click += button2_Click;             
+            bCreateTask.Click += bCreateTask_Click;             
         }
 
         /// <summary>
@@ -40,11 +38,11 @@ namespace Student.WindowsTodo
         /// </summary>
         /// /// <param name="sender">Кнопка, вызвавшая обработчик.</param>
         /// <param name="e">Данные о событии нажатия кнопки.</param>
-        private void button2_Click(object? sender, EventArgs e)
+        private void bCreateTask_Click(object? sender, EventArgs e)
         {
-            string title = textBox1.Text.Trim();
+            string taskTitle = tbTaskTitle.Text.Trim();
 
-            if (string.IsNullOrEmpty(title))
+            if (string.IsNullOrEmpty(taskTitle))
             {
                 MessageBox.Show(
                     "Введите заголовок задачи.",
@@ -52,14 +50,14 @@ namespace Student.WindowsTodo
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
 
-                textBox1.Focus();
+                tbTaskTitle.Focus();
                 return;           
             }
 
             CreatedTask = new Task
             {
-                Title = title,
-                Description = textBox2.Text.Trim()
+                Title = taskTitle,
+                Description = tbTaskDescription.Text.Trim()
             };
 
             DialogResult = DialogResult.OK;

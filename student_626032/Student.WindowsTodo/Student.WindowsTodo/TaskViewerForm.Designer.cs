@@ -2,7 +2,7 @@
 
 namespace Student.WindowsTodo
 {
-    public partial class Form1 : Form
+    public partial class TaskViewerForm : Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,11 +31,11 @@ namespace Student.WindowsTodo
         private void InitializeComponent()
         {
             button1 = new Button();
-            dataGridView2 = new DataGridView();
+            gvTask = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewButtonColumn();
-            ((ISupportInitialize)dataGridView2).BeginInit();
+            ((ISupportInitialize)gvTask).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -46,17 +46,17 @@ namespace Student.WindowsTodo
             button1.TabIndex = 0;
             button1.Text = "Добавить задачу";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += bAddTask_Click;
             // 
             // dataGridView2
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView2.Location = new Point(12, 90);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(776, 333);
-            dataGridView2.TabIndex = 2;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            gvTask.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gvTask.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            gvTask.Location = new Point(12, 90);
+            gvTask.Name = "dataGridView2";
+            gvTask.Size = new Size(776, 333);
+            gvTask.TabIndex = 2;
+            gvTask.CellContentClick += gvTask_CellContentClick;
             // 
             // Column1
             // 
@@ -82,18 +82,18 @@ namespace Student.WindowsTodo
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView2);
+            Controls.Add(gvTask);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Todo";
-            ((ISupportInitialize)dataGridView2).EndInit();
+            ((ISupportInitialize)gvTask).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button1;
-        private DataGridView dataGridView2;
+        private DataGridView gvTask;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewButtonColumn Column3;
