@@ -1,8 +1,3 @@
-﻿################################################################################
-# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs
-/student_626032/Student.ConsoleTodo/Student.ConsoleTodo/obj/Debug/net8.0
-/student_626032/Student.SharpInstructions/Student.SharpInstructions/obj/Debug/net8.0
-/student_626032/.gitignore.txt
+*.vs/
+*.bin/ 
+*.obj/
