@@ -22,9 +22,9 @@
             MaximizeBox = false;
             MinimizeBox = false;
 
-            tbTaskTitle.Text = "";
+            tbTaskTitle.Text = string.Empty;
             tbTaskTitle.PlaceholderText = "Введите заголовок задачи...";
-            tbTaskDescription.Text = "";
+            tbTaskDescription.Text = string.Empty;
             tbTaskDescription.PlaceholderText = "Введите описание задачи...";
 
             bCancel.DialogResult = DialogResult.Cancel; 
