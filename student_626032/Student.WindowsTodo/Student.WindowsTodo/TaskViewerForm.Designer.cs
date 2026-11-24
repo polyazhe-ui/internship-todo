@@ -48,12 +48,19 @@ namespace Student.WindowsTodo
             button1.UseVisualStyleBackColor = true;
             button1.Click += bAddTask_Click;
             // 
-            // dataGridView2
+            // gvTask
             // 
+            gvTask.AllowUserToAddRows = false;
+            gvTask.AllowUserToDeleteRows = false;
+            gvTask.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gvTask.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvTask.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             gvTask.Location = new Point(12, 90);
-            gvTask.Name = "dataGridView2";
+            gvTask.MultiSelect = false;
+            gvTask.Name = "gvTask";
+            gvTask.ReadOnly = true;
+            gvTask.RowHeadersVisible = false;
+            gvTask.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvTask.Size = new Size(776, 333);
             gvTask.TabIndex = 2;
             gvTask.CellContentClick += gvTask_CellContentClick;
@@ -62,29 +69,32 @@ namespace Student.WindowsTodo
             // 
             Column1.HeaderText = "Задача";
             Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Column2
             // 
             Column2.HeaderText = "Описание";
             Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // Column3
             // 
             Column3.HeaderText = "Удалить";
             Column3.Name = "Column3";
+            Column3.ReadOnly = true;
             Column3.Resizable = DataGridViewTriState.True;
             Column3.SortMode = DataGridViewColumnSortMode.Automatic;
             Column3.Text = "Удалить ";
             Column3.UseColumnTextForButtonValue = true;
             // 
-            // Form1
+            // TaskViewerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(gvTask);
             Controls.Add(button1);
-            Name = "Form1";
+            Name = "TaskViewerForm";
             Text = "Todo";
             ((ISupportInitialize)gvTask).EndInit();
             ResumeLayout(false);
@@ -98,4 +108,7 @@ namespace Student.WindowsTodo
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewButtonColumn Column3;
     }
+
+
+
 }

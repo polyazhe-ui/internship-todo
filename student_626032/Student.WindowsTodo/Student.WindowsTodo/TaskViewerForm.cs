@@ -2,7 +2,6 @@ using Task = Student.WindowsTodo.Task;
 
 namespace Student.WindowsTodo
 {
-
     /// <summary>
     /// Первая форма для просмотра задач. 
     /// </summary>
@@ -15,28 +14,9 @@ namespace Student.WindowsTodo
         /// </summary>
         public TaskViewerForm()
         {
-            InitializeComponent();        
+            InitializeComponent();
 
             StartPosition = FormStartPosition.CenterScreen;
-            SetupGrid();
-        }
-
-        /// <summary>
-        /// Настраивает таблицу.
-        /// </summary>
-        private void SetupGrid()
-        {
-            gvTask.AllowUserToAddRows = false;    
-            gvTask.AllowUserToDeleteRows = false; 
-            gvTask.ReadOnly = true;               
-            gvTask.RowHeadersVisible = false;     
-            gvTask.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            gvTask.MultiSelect = false;
-
-            gvTask.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Column1.FillWeight = 30;
-            Column2.FillWeight = 55;
-            Column3.FillWeight = 15;
         }
 
         /// <summary>
